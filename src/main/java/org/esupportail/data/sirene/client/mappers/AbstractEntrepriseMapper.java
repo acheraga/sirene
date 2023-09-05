@@ -20,7 +20,6 @@ public abstract class AbstractEntrepriseMapper {
 
 		ChargeurCodeNafJson chargeurCodeNafJson = new ChargeurCodeNafJson();
 
-		//System.out.println(etab);
 		StructureFormDto dto = new StructureFormDto();
 
 		dto.setNumeroSiret(etab.getSiret());
@@ -97,7 +96,6 @@ public abstract class AbstractEntrepriseMapper {
 			dto.setCodeNafN5(activitePrincipale);
 			CodeNaf cn = chargeurCodeNafJson.findCodeNafByCode(activitePrincipale);
 			if (cn != null) {
-				//System.out.println(cn);
 				dto.setActivitePrincipale(cn.getIntitulSDeLaNAFRV2VersionFinale());
 			}
 

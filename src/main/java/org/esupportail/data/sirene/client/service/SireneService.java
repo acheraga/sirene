@@ -46,7 +46,6 @@ public class SireneService implements SireneServiceI {
 	@Override
 	public List<StructureFormDto> findByMotcleCp(String cp, String motcle) {
 		
-		System.out.println("++++++++++++++++++++"+cp+ "--------------------"+motcle);
 		EtablissementApi api = accessService.getEtablissementApi();
 		String q = "denominationUniteLegale:\"%s\"* AND ( codeCommuneEtablissement:%s OR codePostalEtablissement:%s )";
 

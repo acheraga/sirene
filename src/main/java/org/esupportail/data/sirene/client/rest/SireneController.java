@@ -4,6 +4,8 @@ import java.util.List;
 
 import org.esupportail.data.sirene.client.dto.StructureFormDto;
 import org.esupportail.data.sirene.client.service.SireneService;
+import org.slf4j.Logger;
+import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
 import org.springframework.http.HttpStatus;
 import org.springframework.http.ResponseEntity;
@@ -15,6 +17,8 @@ import org.springframework.web.bind.annotation.RestController;
 @RestController
 @RequestMapping("sirene")
 public class SireneController implements SireneControllerI {
+	
+	final private transient Logger logger = LoggerFactory.getLogger(this.getClass());
 
 	@Autowired
 	private SireneService sireneService;
@@ -40,7 +44,7 @@ public class SireneController implements SireneControllerI {
 	@Override
 	@GetMapping("/findByMotCleCodePostal")
 	public ResponseEntity<List<StructureFormDto>> findByMotCleCodePostal(String cp, String motcle) {
-		System.out.println("++++++++++++++++++++++------------------------------");
+		logger.info("Recherche par cp et raison social : " +cp + "  "+ motcle);
 		List<StructureFormDto> result = sireneService.findByMotcleCp(cp,motcle);
 		if (result != null)
 			return new ResponseEntity<List<StructureFormDto>>(result, HttpStatus.OK);
