@@ -1,0 +1,28 @@
+
+springdoc:
+  version: '@springdoc.version@'
+  api-docs:
+    groups:
+      enabled: true
+  display-request-duration: true
+  groups-order: ASC
+  operationsSorter: method
+  disable-swagger-default-url: true
+  use-root-path: true
+  path: /swagger-ui.html
+  url: /api-docs.yaml
+    
+
+
+
+app:
+ openApi:
+    server-url: http://localhost:8080
+    server-version: 0.1.15
+    server-title: Client API SCOLARITE REST
+ properties: 
+  sirene:
+      baseUri: https://api.insee.fr/entreprises/sirene/V3
+      tokenUrl: https://api.insee.fr/token
+      svcAcountLogin: XXXXXXXXXXXXXXX 
+      svcAcountPassword: YYYYYYYYYYYYY

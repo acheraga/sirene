@@ -1,0 +1,8 @@
+spring:
+ config:
+    import:
+    - file:///etc/simple-sirene/application.yml
+logging:
+  config: file:/etc/simple-sirene/logback.xml
+      
+      
