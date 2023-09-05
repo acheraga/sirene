@@ -1,15 +1,15 @@
-package org.esupportail.data.sirene.client.service;
+package org.esupportail.referentiel.sirene.client.service;
 
 import java.util.ArrayList;
 import java.util.List;
 
-import org.esupportail.data.sirene.client.dto.StructureFormDto;
-import org.esupportail.data.sirene.client.mappers.AbstractEntrepriseMapper;
 import org.esupportail.data.sirene.entreprise.client.api.EtablissementApi;
 import org.esupportail.data.sirene.entreprise.client.invoker.ApiException;
 import org.esupportail.data.sirene.entreprise.client.model.Etablissement;
 import org.esupportail.data.sirene.entreprise.client.model.ReponseEtablissement;
 import org.esupportail.data.sirene.entreprise.client.model.ReponseEtablissements;
+import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
+import org.esupportail.referentiel.sirene.client.mappers.AbstractEntrepriseMapper;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,8 +1,8 @@
-package org.esupportail.data.sirene.client.rest;
+package org.esupportail.referentiel.sirene.client.rest;
 
 import java.util.List;
 
-import org.esupportail.data.sirene.client.dto.StructureFormDto;
+import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
 import org.springframework.http.ResponseEntity;
 
 import io.swagger.v3.oas.annotations.Operation;

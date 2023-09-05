@@ -1,4 +1,4 @@
-package org.esupportail.data.sirene.client;
+package org.esupportail.referentiel.sirene;
 
 import java.time.LocalDateTime;
 

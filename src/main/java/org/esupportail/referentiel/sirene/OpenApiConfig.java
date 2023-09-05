@@ -1,4 +1,4 @@
-package org.esupportail.data.sirene.client;
+package org.esupportail.referentiel.sirene;
 
 import org.springdoc.core.GroupedOpenApi;
 import org.springframework.context.annotation.Bean;
@@ -17,7 +17,7 @@ public class OpenApiConfig {
 	
 	@Bean
 	public GroupedOpenApi sihamGroup() {
-		return GroupedOpenApi.builder().group("sirene").packagesToScan("org.esupportail.data.sirene.client.rest").build();
+		return GroupedOpenApi.builder().group("sirene").packagesToScan("org.esupportail.referentiel.sirene.client.rest").build();
 	}
 
 }

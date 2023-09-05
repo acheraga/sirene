@@ -1,8 +1,8 @@
-package org.esupportail.data.sirene.client.service;
+package org.esupportail.referentiel.sirene.client.service;
 
 import java.util.List;
 
-import org.esupportail.data.sirene.client.dto.StructureFormDto;
+import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
 
 public interface SireneServiceI {
 	

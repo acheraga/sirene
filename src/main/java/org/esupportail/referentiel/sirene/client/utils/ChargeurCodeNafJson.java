@@ -1,11 +1,11 @@
-package org.esupportail.data.sirene.client.utils;
+package org.esupportail.referentiel.sirene.client.utils;
 
 import java.io.IOException;
 import java.nio.file.Files;
 import java.nio.file.Paths;
 import java.util.List;
 
-import org.esupportail.data.sirene.client.dto.CodeNaf;
+import org.esupportail.referentiel.sirene.client.dto.CodeNaf;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.stereotype.Repository;

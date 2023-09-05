@@ -1,4 +1,4 @@
-package org.esupportail.data.sirene.client.service;
+package org.esupportail.referentiel.sirene.client.service;
 
 import java.io.IOException;
 import java.net.URI;
@@ -13,11 +13,11 @@ import java.util.Base64;
 import java.util.HashMap;
 import java.util.stream.Collectors;
 
-import org.esupportail.data.sirene.client.AccessServiceConfig;
 import org.esupportail.data.sirene.entreprise.client.api.EtablissementApi;
 import org.esupportail.data.sirene.entreprise.client.api.InformationsApi;
 import org.esupportail.data.sirene.entreprise.client.invoker.ApiClient;
 import org.esupportail.data.sirene.entreprise.client.invoker.Configuration;
+import org.esupportail.referentiel.sirene.AccessServiceConfig;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

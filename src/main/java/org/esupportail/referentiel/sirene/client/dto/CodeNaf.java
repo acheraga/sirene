@@ -1,4 +1,4 @@
-package org.esupportail.data.sirene.client.dto;
+package org.esupportail.referentiel.sirene.client.dto;
 
 import java.util.HashMap;
 import java.util.Map;

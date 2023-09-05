@@ -1,5 +1,5 @@
 
-package org.esupportail.data.sirene.client.form;
+package org.esupportail.referentiel.sirene.client.form;
 
 import java.io.Serializable;
 

@@ -1,9 +1,9 @@
-package org.esupportail.data.sirene.client.rest;
+package org.esupportail.referentiel.sirene.client.rest;
 
 import java.util.List;
 
-import org.esupportail.data.sirene.client.dto.StructureFormDto;
-import org.esupportail.data.sirene.client.service.SireneService;
+import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
+import org.esupportail.referentiel.sirene.client.service.SireneService;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;

@@ -1,14 +1,14 @@
-package org.esupportail.data.sirene.client.mappers;
+package org.esupportail.referentiel.sirene.client.mappers;
 
 
-import org.esupportail.data.sirene.client.dto.CodeNaf;
-import org.esupportail.data.sirene.client.dto.StructureFormDto;
-import org.esupportail.data.sirene.client.utils.ChargeurCodeNafJson;
-import org.esupportail.data.sirene.client.utils.Pays;
-import org.esupportail.data.sirene.client.utils.TrancheEffectif;
 import org.esupportail.data.sirene.entreprise.client.model.Adresse;
 import org.esupportail.data.sirene.entreprise.client.model.Etablissement;
 import org.esupportail.data.sirene.entreprise.client.model.UniteLegaleEtablissement;
+import org.esupportail.referentiel.sirene.client.dto.CodeNaf;
+import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
+import org.esupportail.referentiel.sirene.client.utils.ChargeurCodeNafJson;
+import org.esupportail.referentiel.sirene.client.utils.Pays;
+import org.esupportail.referentiel.sirene.client.utils.TrancheEffectif;
 import org.slf4j.LoggerFactory;
 
 

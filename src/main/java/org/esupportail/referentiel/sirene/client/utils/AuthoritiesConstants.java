@@ -1,4 +1,4 @@
-package org.esupportail.data.sirene.client.utils;
+package org.esupportail.referentiel.sirene.client.utils;
 
 public final class AuthoritiesConstants {
 	public static final String ADMIN = "ROLE_ADMIN";

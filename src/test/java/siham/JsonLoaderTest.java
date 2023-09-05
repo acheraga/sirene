@@ -10,7 +10,7 @@ import java.util.List;
 import java.util.regex.Matcher;
 import java.util.regex.Pattern;
 
-import org.esupportail.data.sirene.client.dto.CodeNaf;
+import org.esupportail.referentiel.sirene.client.dto.CodeNaf;
 import org.junit.jupiter.api.Test;
 
 import com.fasterxml.jackson.core.JsonProcessingException;
