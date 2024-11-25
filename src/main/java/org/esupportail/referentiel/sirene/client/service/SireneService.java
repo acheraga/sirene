@@ -47,9 +47,10 @@ public class SireneService implements SireneServiceI {
 	public List<StructureFormDto> findByMotcleCp(String cp, String motcle) {
 		
 		EtablissementApi api = accessService.getEtablissementApi();
-		String q = "denominationUniteLegale:\"%s\"* AND ( codeCommuneEtablissement:%s OR codePostalEtablissement:%s )";
+		//String q = "denominationUniteLegale:\"%s\"* AND ( codeCommuneEtablissement:%s OR codePostalEtablissement:%s )";
+		String q = "(denominationUniteLegale:\"*%s\" OR sigleUniteLegale: \"*%s*\" ) AND ( codeCommuneEtablissement:%s OR codePostalEtablissement:%s )";
 
-		String query = String.format(q, motcle, cp, cp);
+		String query = String.format(q, motcle,motcle, cp, cp);
 		logger.info("findEtablissementDataGouvByRaiosnEtCP query : " + query);
 		String date = null;
 		String champs = null;

@@ -50,7 +50,7 @@
 			<artifactId>springdoc-openapi-javadoc</artifactId>
 			<version>1.6.14</version>
 		</dependency>
-		
+
 		<dependency>
 			<groupId>org.zalando</groupId>
 			<artifactId>problem-spring-web</artifactId>
@@ -75,15 +75,19 @@
 			<groupId>wsdl4j</groupId>
 			<artifactId>wsdl4j</artifactId>
 		</dependency>
-		
-		
-		
-		
+
+
 		<dependency>
 			<groupId>org.esupportail.data</groupId>
 			<artifactId>sirene</artifactId>
-			<version>3.9</version>
+			<version>3.11</version>
 		</dependency>
+
+		<!--		<dependency>-->
+		<!--			<groupId>org.esupportail.data</groupId>-->
+		<!--			<artifactId>sirene</artifactId>-->
+		<!--			<version>3.9</version>-->
+		<!--		</dependency>-->
 
 	</dependencies>
 	<build>

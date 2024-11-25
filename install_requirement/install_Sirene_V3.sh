@@ -51,7 +51,8 @@ export PATH=$PATH:~/bin/openapitools/
 
 #https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3/?envName=Production%20and%20Sandbox
 #wget https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3\?envName\=Production%20and%20Sandbox -O sirene.json
-curl https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3/?envName=Production%20and%20Sandbox --output sirene.json
+#curl https://api.insee.fr/catalogue/api-docs/carbon.super/Sirene/V3/?envName=Production%20and%20Sandbox --output sirene.json
+curl https://api-apimanager.insee.fr/portal/environments/DEFAULT/apis/2ba0e549-5587-3ef1-9082-99cd865de66f/pages/6548510e-c3e1-3099-be96-6edf02870699/content --output sirene.json
 
 ##creation du config.json
 
