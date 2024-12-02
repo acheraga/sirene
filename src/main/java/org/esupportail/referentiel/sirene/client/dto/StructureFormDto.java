@@ -45,6 +45,9 @@ public class StructureFormDto {
     @NotNull
     private int idStatutJuridique;
 
+    private String  libelleStatutJuridique;
+
+    
     @NotNull
     private int idTypeStructure;
 
@@ -237,6 +240,14 @@ public class StructureFormDto {
 
 		public void setPays(String pays) {
 			this.pays = pays;
+		}
+
+		public String getLibelleStatutJuridique() {
+			return libelleStatutJuridique;
+		}
+
+		public void setLibelleStatutJuridique(String libelleStatutJuridique) {
+			this.libelleStatutJuridique = libelleStatutJuridique;
 		}
     
 

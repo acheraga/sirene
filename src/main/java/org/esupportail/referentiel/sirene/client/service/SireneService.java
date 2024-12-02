@@ -34,6 +34,7 @@ public class SireneService implements SireneServiceI {
 
 		try {
 			ReponseEtablissement response = api.findBySiret(siret, date, champs, masquerValeursNulles);
+			System.out.println(response);
 			return AbstractEntrepriseMapper.mapper(response.getEtablissement());
 
 		} catch (ApiException e) {

@@ -1,24 +1,24 @@
 package org.esupportail.referentiel.sirene.client.mappers;
 
+import java.util.List;
 
 import org.esupportail.data.sirene.entreprise.client.model.Adresse;
 import org.esupportail.data.sirene.entreprise.client.model.Etablissement;
 import org.esupportail.data.sirene.entreprise.client.model.UniteLegaleEtablissement;
-import org.esupportail.referentiel.sirene.client.dto.CodeNaf;
+import org.esupportail.referentiel.sirene.client.dto.CategorieJuridique;
+import org.esupportail.referentiel.sirene.client.dto.SimpleCodeNaf;
 import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
-import org.esupportail.referentiel.sirene.client.utils.ChargeurCodeNafJson;
+import org.esupportail.referentiel.sirene.client.service.SqliteService;
 import org.esupportail.referentiel.sirene.client.utils.Pays;
 import org.esupportail.referentiel.sirene.client.utils.TrancheEffectif;
 import org.slf4j.LoggerFactory;
-
 
 public abstract class AbstractEntrepriseMapper {
 
 	final private static transient org.slf4j.Logger logger = LoggerFactory.getLogger("AbstractEntrepriseMapper");
 
 	public static StructureFormDto mapper(Etablissement etab) {
-
-		ChargeurCodeNafJson chargeurCodeNafJson = new ChargeurCodeNafJson();
+		SqliteService sqlService = new SqliteService();
 
 		StructureFormDto dto = new StructureFormDto();
 
@@ -94,11 +94,22 @@ public abstract class AbstractEntrepriseMapper {
 			// NafN5DTO activitePrincipaleDto =
 			// nomenclatureDomainService.getNafN5FromCode(activitePrincipale);
 			dto.setCodeNafN5(activitePrincipale);
-			CodeNaf cn = chargeurCodeNafJson.findCodeNafByCode(activitePrincipale);
-			if (cn != null) {
-				dto.setActivitePrincipale(cn.getIntitulSDeLaNAFRV2VersionFinale());
-			}
 
+			List<SimpleCodeNaf> simpleCodeNafs = sqlService.findSimpleCodeNaf(activitePrincipale);
+
+			System.out.println(simpleCodeNafs);
+
+			if (simpleCodeNafs!=null && !simpleCodeNafs.isEmpty()) {
+				dto.setActivitePrincipale(simpleCodeNafs.get(0).getIntituleCourt());
+			}
+		
+
+		}
+
+		List<CategorieJuridique> categories = sqlService
+				.findStatutJuridique(unite_legale.getCategorieJuridiqueUniteLegale());
+		if (categories != null && !categories.isEmpty()) {
+			dto.setLibelleStatutJuridique(categories.get(0).getLibelle());
 		}
 
 		return dto;
