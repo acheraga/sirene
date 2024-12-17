@@ -8,9 +8,9 @@ import org.esupportail.data.sirene.entreprise.client.model.UniteLegaleEtablissem
 import org.esupportail.referentiel.sirene.client.dto.CategorieJuridique;
 import org.esupportail.referentiel.sirene.client.dto.SimpleCodeNaf;
 import org.esupportail.referentiel.sirene.client.dto.StructureFormDto;
+import org.esupportail.referentiel.sirene.client.dto.TrancheEffectif;
 import org.esupportail.referentiel.sirene.client.service.SqliteService;
 import org.esupportail.referentiel.sirene.client.utils.Pays;
-import org.esupportail.referentiel.sirene.client.utils.TrancheEffectif;
 import org.slf4j.LoggerFactory;
 
 public abstract class AbstractEntrepriseMapper {
@@ -72,9 +72,15 @@ public abstract class AbstractEntrepriseMapper {
 		}
 
 		String effectif = unite_legale.getTrancheEffectifsUniteLegale();
+		dto.setIdEffectif(effectif);
 		if (effectif != null && !effectif.isBlank() && !effectif.isEmpty()) {
-			dto.setTrancheEffectif(TrancheEffectif.getEfftifMap().get(effectif));
-			dto.setIdEffectif(effectif);
+			List<TrancheEffectif> effectifs = sqlService.findtranche_effectif(effectif);
+			if(effectifs!=null && !effectifs.isEmpty()) {
+				dto.setTrancheEffectif(effectifs.get(0).getLibelle());
+			}
+			
+			//dto.setTrancheEffectif(TrancheEffectifStatic.getEfftifMap().get(effectif));
+			
 		}
 
 		try {

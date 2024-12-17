@@ -11,6 +11,7 @@ import java.util.List;
 
 import org.esupportail.referentiel.sirene.client.dto.CategorieJuridique;
 import org.esupportail.referentiel.sirene.client.dto.SimpleCodeNaf;
+import org.esupportail.referentiel.sirene.client.dto.TrancheEffectif;
 import org.springframework.stereotype.Service;
 
 @Service
@@ -59,6 +60,26 @@ public class SqliteService {
 		}
 
 		return simpleCodeNafs;
+
+	}
+	
+	public List<TrancheEffectif> findtranche_effectif(String code) {
+
+		List<TrancheEffectif> effectifs = new ArrayList<>();
+
+		try (Connection connection = DriverManager.getConnection(urlConnection);
+				PreparedStatement pstmt = connection.prepareStatement(
+						"SELECT  CODE,INTITULE FROM tranche_effectif where Code = ?")) {
+			pstmt.setString(1, code);
+			ResultSet rs = pstmt.executeQuery();
+			while (rs.next()) {
+				effectifs.add(new TrancheEffectif( rs.getString("CODE"), rs.getString("INTITULE")));
+			}
+		} catch (SQLException e) {
+			e.printStackTrace(System.err);
+		}
+
+		return effectifs;
 
 	}
 

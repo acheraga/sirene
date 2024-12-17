@@ -3,7 +3,7 @@ package org.esupportail.referentiel.sirene.client.utils;
 import java.util.HashMap;
 import java.util.Map;
 
-public final class TrancheEffectif {
+public final class TrancheEffectifStatic {
 
 	private final static Map<String, String> effectifMap = new HashMap<>();
 
@@ -31,7 +31,7 @@ public final class TrancheEffectif {
 
 	}
 
-	private TrancheEffectif() {
+	private TrancheEffectifStatic() {
 	}
 
 }
