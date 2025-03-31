@@ -1,15 +1,8 @@
 springdoc:
-  version: '@springdoc.version@'
   api-docs:
-    groups:
-      enabled: true
-  display-request-duration: true
-  groups-order: ASC
-  operationsSorter: method
-  disable-swagger-default-url: true
-  use-root-path: true
-  path: /swagger-ui.html
-  url: /api-docs.yaml
+    path: /v3/api-docs
+  swagger-ui:
+    path: /swagger-ui.html
 
 
 spring:

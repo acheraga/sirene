@@ -62,8 +62,10 @@ echo $vesrion_api
 
 config="""
 {
+   \"useJakartaEe\": true,
+  \"library\": \"restassured\",
   \"groupId\" : \"org.esupportail.data\",
-  \"artifactId\" : \"sirene\",
+   \"artifactId\" : \"sirene\",
   \"artifactVersion\" : "$vesrion_api",
   \"apiPackage\" : \"org.esupportail.data.sirene.entreprise.client.api\",
   \"invokerPackage\" : \"org.esupportail.data.sirene.entreprise.client.invoker\",
